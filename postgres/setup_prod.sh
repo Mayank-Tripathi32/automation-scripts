@@ -284,7 +284,8 @@ host    all            all             ::1/128                 scram-sha-256
 EOF
 
     if [ "$ALLOW_ALL_CONNECTIONS" = true ]; then
-        echo "host       all             all             0.0.0.0/0               scram-sha-256" >> "${PG_CONF_DIR}/pg_hba.conf"
+     # Enable this if you want to avoid SSL
+     #  echo "host       all             all             0.0.0.0/0               scram-sha-256" >> "${PG_CONF_DIR}/pg_hba.conf"
         echo "hostssl    all             all             0.0.0.0/0               scram-sha-256" >> "${PG_CONF_DIR}/pg_hba.conf"
         echo "hostssl    all             all             ::/0                    scram-sha-256" >> "${PG_CONF_DIR}/pg_hba.conf"
     fi
