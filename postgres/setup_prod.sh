@@ -409,8 +409,6 @@ configure_firewall() {
     if command -v ufw > /dev/null; then
         ufw allow proto tcp from any to any port 5432 comment 'PostgreSQL'
         ufw allow proto tcp from any to any port 6432 comment 'PgBouncer'
-        ufw limit 5432/tcp
-        ufw limit 6432/tcp
     else
         warn "UFW not installed. Please configure your firewall manually."
     fi
