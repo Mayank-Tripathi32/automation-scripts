@@ -1,4 +1,4 @@
-# Env Automations Project
+# Postgress Automations Project
 
 Welcome to automation world, These scripts are written to help setup a production ready native linux env without docker.
 
